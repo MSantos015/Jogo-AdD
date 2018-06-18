@@ -7,11 +7,15 @@ public class PlayerCtrl : MonoBehaviour {
 	public float horizontalSpeed =10F;
 
 	public float jumpSpeed=600F;
+	
 	Rigidbody2D rb;
+
+	SpriteRenderer sr;
 
 	// Use this for initialization
 	void Start () {
 		rb=GetComponent<Rigidbody2D>();
+		sr=GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +37,13 @@ public class PlayerCtrl : MonoBehaviour {
 
 	void MoveHorizontal(float speed){
 		rb.velocity=new Vector2 (speed, rb.velocity.y);
+
+		if (speed<0F){
+			sr.flipX=true;
+		}
+		else {
+			sr.flipX=false;
+		}
 	}
 
 	void StopMoving(){
