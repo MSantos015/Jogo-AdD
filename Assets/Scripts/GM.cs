@@ -14,10 +14,7 @@ public class GM : MonoBehaviour {
 		if(insatance==null){
 			insatance=this;
 		}
-		else if(insatance !=this){
-			Destroy(gameObject);
-		}
-		DontDestroyOnLoad(gameObject);
+		
 	}
 	// Use this for initialization
 	void Start () {
