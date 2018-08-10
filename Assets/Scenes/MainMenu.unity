@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 252957120}
   - component: {fileID: 252957119}
   m_Layer: 0
-  m_Name: cooltext294628963378827
+  m_Name: HeyJackLogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 293585851}
   - component: {fileID: 293585850}
   m_Layer: 0
-  m_Name: Idle (1)
+  m_Name: HeyJack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300012, guid: b6c2205ba97284e4cbe613b3a8c86e09, type: 3}
+  m_Sprite: {fileID: 21300014, guid: b6c2205ba97284e4cbe613b3a8c86e09, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
