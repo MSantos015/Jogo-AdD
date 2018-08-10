@@ -123,6 +123,7 @@ public class PlayerCtrl : MonoBehaviour {
 		if(other.gameObject.CompareTag("Coin")){
 			AudioManager.instance.PlayCoinPickupSound(other.gameObject);
 			SFXManager.instance.ShowCoinParticles(other.gameObject);
+			GM.insatance.IncrementCoinCount();
 			Destroy(other.gameObject);	
 		}
 	
