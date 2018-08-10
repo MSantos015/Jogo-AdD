@@ -11,6 +11,9 @@ public class GM : MonoBehaviour {
 	PlayerCtrl player;
 	public float timeToRespawn =2f;
 
+	public float maxTime=120f;
+	bool timerOn=true;
+	float timeLeft;
 	public UI ui;
 	GameData data=new GameData();
 	void Awake(){
@@ -24,6 +27,7 @@ public class GM : MonoBehaviour {
 		if(player==null){
 			RespawnPlayer();
 		}
+		timeLeft=maxTime;
 	}
 	
 	// Update is called once per frame
@@ -34,14 +38,29 @@ public class GM : MonoBehaviour {
 				player=obj.GetComponent<PlayerCtrl>();
 			}
 		}
+		UpdateTimer();
 		DisplayHudData();
 	}
+	void UpdateTimer(){
+		if(timerOn){
+			timeLeft=timeLeft-Time.deltaTime;
+			if(timeLeft<=0f){
+				timeLeft=0;
+				ExpirePlayer();
+			}
+		}
+	}
 
-	void DisplayHudData(){
+	void DisplayHudData(){ 
 		ui.hud.txtCoinCount.text= "x " +data.coinCount;
+		ui.hud.txtLifeCount.text= "x "+data.lifeCount;
+		ui.hud.txtTimer.text= "Timer: "+timeLeft.ToString("F0");
 	}
 	public void IncrementCoinCount(){
 		data.coinCount++;
+	}
+	public void DecrementLives(){
+		data.lifeCount--;
 	}
 	public void RespawnPlayer(){
 		Instantiate(playerPrefab,spawnPoint.position, spawnPoint.rotation);
@@ -49,8 +68,26 @@ public class GM : MonoBehaviour {
 	public void KillPlayer(){
 		if(player!=null){
 			Destroy (player.gameObject);
-			Invoke("RespawnPlayer", timeToRespawn);
+			DecrementLives();
+			if(data.lifeCount>0){
+				Invoke("RespawnPlayer", timeToRespawn);
+			}
+			else{
+				GameOver();
+			}
 		}
+	}
+	public void ExpirePlayer(){
+		if(player!=null){
+			Destroy (player.gameObject);
+		}
+		GameOver();
+	}
+	void GameOver(){
+		timerOn=false;
+		ui.gameOver.txtCoinCount.text="Coins: "+data.coinCount;
+		ui.gameOver.txtTimer.text="Timer: "+timeLeft.ToString("F0");
+		ui.gameOver.gameOverPanel.SetActive(true);
 	}
 }
 	
