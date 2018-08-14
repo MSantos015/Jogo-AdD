@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour {
 
@@ -24,10 +25,11 @@ public class GM : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+		timeLeft=maxTime;
 		if(player==null){
 			RespawnPlayer();
 		}
-		timeLeft=maxTime;
+		
 	}
 	
 	// Update is called once per frame
@@ -40,6 +42,19 @@ public class GM : MonoBehaviour {
 		}
 		UpdateTimer();
 		DisplayHudData();
+	}
+
+	public void RestartLevel(){
+	SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+	public void ExitToMainMenu(){
+		LoadScene("MainMenu");
+	}
+	public void CloseApp(){
+		Application.Quit();
+	}
+	public void LoadScene(string sceneName){
+		SceneManager.LoadScene(sceneName);
 	}
 	void UpdateTimer(){
 		if(timerOn){
@@ -63,7 +78,9 @@ public class GM : MonoBehaviour {
 		data.lifeCount--;
 	}
 	public void RespawnPlayer(){
-		Instantiate(playerPrefab,spawnPoint.position, spawnPoint.rotation);
+		if(timeLeft>0F){
+					Instantiate(playerPrefab,spawnPoint.position, spawnPoint.rotation);
+		}
 	}
 	public void KillPlayer(){
 		if(player!=null){
