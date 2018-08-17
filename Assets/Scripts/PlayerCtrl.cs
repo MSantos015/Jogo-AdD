@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-	/* 
-	Idle- 0
-	Jump- 1
-	Run- 2
-	Falling- 3
-	Hurt- 4
-	*/
+/* 
+Idle- 0
+Jump- 1
+Run- 2
+Falling- 3
+Hurt- 4
+*/
 
 public class PlayerCtrl : MonoBehaviour {
 
@@ -45,8 +45,8 @@ public class PlayerCtrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(transform.position.y <GM.insatance.yMinLive){
-			GM.insatance.KillPlayer();
+		if(transform.position.y <GM.instance.yMinLive){
+			GM.instance.KillPlayer();
 		}
 		isGrounded=Physics2D.OverlapBox(new Vector2(feet.position.x, feet.position.y), new Vector2(feetWidth, feetHeight),360f, whatIsGround);
 		float horizontalInput=Input.GetAxisRaw("Horizontal"); // -1: esquerda, 1: direita
@@ -120,13 +120,21 @@ public class PlayerCtrl : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.CompareTag("Coin")){
+
+		switch (other.gameObject.tag){
+			case "Coin":
 			AudioManager.instance.PlayCoinPickupSound(other.gameObject);
 			SFXManager.instance.ShowCoinParticles(other.gameObject);
-			GM.insatance.IncrementCoinCount();
+			GM.instance.IncrementCoinCount();
 			Destroy(other.gameObject);	
+			break;
+
+		case "Finish":
+			GM.instance.LevelComplete();
+			break;
+		}			
 		}
 	
 	}
 	
-}
+

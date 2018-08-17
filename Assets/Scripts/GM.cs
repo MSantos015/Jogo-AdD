@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour {
 
-	public static GM insatance=null;
+	public static GM instance=null;
 	public float yMinLive=-5f;
 	public Transform spawnPoint;
 	public GameObject playerPrefab;
@@ -18,8 +18,8 @@ public class GM : MonoBehaviour {
 	public UI ui;
 	GameData data=new GameData();
 	void Awake(){
-		if(insatance==null){
-			insatance=this;
+		if(instance==null){
+			instance=this;
 		}
 		
 	}
@@ -105,6 +105,14 @@ public class GM : MonoBehaviour {
 		ui.gameOver.txtCoinCount.text="Coins: "+data.coinCount;
 		ui.gameOver.txtTimer.text="Timer: "+timeLeft.ToString("F0");
 		ui.gameOver.gameOverPanel.SetActive(true);
+	}
+
+	public void LevelComplete(){
+		Destroy(player.gameObject);
+		timerOn=false;
+		ui.levelComplete.txtCoinCount.text="Coins: "+data.coinCount;
+		ui.levelComplete.txtTimer.text="Timer: "+timeLeft.ToString("F0");
+		ui.levelComplete.levelCompletePanel.SetActive(true);
 	}
 }
 	
