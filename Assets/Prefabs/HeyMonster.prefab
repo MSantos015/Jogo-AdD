@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95612359485547606}
   - component: {fileID: 50856469706063274}
   - component: {fileID: 58228052919811954}
-  - component: {fileID: 114970125288142508}
+  - component: {fileID: 114752814221618566}
   m_Layer: 0
   m_Name: HeyMonster
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539298189622080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.096, y: 1.399, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114970125288142508
+--- !u!114 &114752814221618566
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,10 +104,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1539298189622080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3de33030e9721c74f9d6ea5e77fa09be, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da9ee32464e29e48bee3e9ef2e4c977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
+  Pos1: {fileID: 0}
+  Pos2: {fileID: 0}
+  speed: 2
+  waitTime: 1.5
 --- !u!212 &212771706964684014
 SpriteRenderer:
   m_ObjectHideFlags: 1
