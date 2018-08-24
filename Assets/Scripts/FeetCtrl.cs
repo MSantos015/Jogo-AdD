@@ -18,7 +18,6 @@ public class FeetCtrl : MonoBehaviour {
  
 	void OnTriggerExit2D(Collider2D other){
 		if(other.gameObject.CompareTag("MovingPlatform")){
-			player.transform.parent=other.transform.parent.transform;
 			player.transform.parent=null;
 		}
 	}
