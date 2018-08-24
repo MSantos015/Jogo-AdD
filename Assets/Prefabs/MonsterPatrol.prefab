@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4625165951619458}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pos2
   m_TagString: Untagged
   m_Icon: {fileID: 7240890024493199768, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 50636198659181294}
   - component: {fileID: 58357453290899874}
   - component: {fileID: 114480519425930656}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HeyMonster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4680010329251702}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MonsterPatrol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4804842725648998}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pos1
   m_TagString: Untagged
   m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
