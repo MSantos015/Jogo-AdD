@@ -22,4 +22,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlayFailSound(GameObject obj){
 		AudioSource.PlayClipAtPoint(audioSFX.fail, obj.transform.position);
 	}
+	public void PlayLaserSound(GameObject obj){
+		AudioSource.PlayClipAtPoint(audioSFX.laser, obj.transform.position);
+	}
 }

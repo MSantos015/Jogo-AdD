@@ -78,7 +78,15 @@ public class PlayerCtrl : MonoBehaviour {
 	}
 
 	void Shoot(){
+
+		if (sr.flipX) {
+			AudioManager.instance.PlayLaserSound(LeftShoot.gameObject);
+			Instantiate(LeftShootPrefab, LeftShoot.position, Quaternion.identity);
+		}
+		else{
+		AudioManager.instance.PlayLaserSound(RightShoot.gameObject);
 		Instantiate(RightShootPrefab, RightShoot.position, Quaternion.identity);
+		}
 	}
 
 	void MoveHorizontal(float speed){
