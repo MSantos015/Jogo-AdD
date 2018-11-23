@@ -5599,6 +5599,16 @@ Prefab:
       propertyPath: m_Name
       value: EnemySpawnPoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114410848125131420, guid: 1ef0fc415106f3e4aa42e2566b4aa4de,
+        type: 2}
+      propertyPath: directions.Array.data[1].y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410848125131420, guid: 1ef0fc415106f3e4aa42e2566b4aa4de,
+        type: 2}
+      propertyPath: directions.Array.data[2].y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef0fc415106f3e4aa42e2566b4aa4de, type: 2}
   m_IsPrefabParent: 0
@@ -7726,6 +7736,16 @@ Prefab:
     - target: {fileID: 1969314266055958, guid: 1ef0fc415106f3e4aa42e2566b4aa4de, type: 2}
       propertyPath: m_Name
       value: EnemySpawnPoint (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410848125131420, guid: 1ef0fc415106f3e4aa42e2566b4aa4de,
+        type: 2}
+      propertyPath: directions.Array.data[1].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114410848125131420, guid: 1ef0fc415106f3e4aa42e2566b4aa4de,
+        type: 2}
+      propertyPath: directions.Array.data[2].y
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef0fc415106f3e4aa42e2566b4aa4de, type: 2}
@@ -11199,6 +11219,7 @@ MonoBehaviour:
   audioSFX:
     coinPickup: {fileID: 8300000, guid: 3dd5cc61d0f9b0544a3974835b037310, type: 3}
     fail: {fileID: 8300000, guid: 79fe446598f89fd4abb4eabe2e65948e, type: 3}
+    laser: {fileID: 8300000, guid: e12bd65aa1f44144db635cfba2703885, type: 3}
   audioPlayer:
     jump: {fileID: 8300000, guid: ac29c685ec49cf749aaff7de1aba5e9b, type: 3}
 --- !u!1001 &1669025909
