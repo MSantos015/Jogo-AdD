@@ -7,6 +7,6 @@ public class AudioSFX {
 
 	public AudioClip coinPickup;
 	public AudioClip fail;
-
+	public AudioClip enemydie;
 	public AudioClip laser;
 }

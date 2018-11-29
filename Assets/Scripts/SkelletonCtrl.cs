@@ -28,4 +28,10 @@ public class SkelletonCtrl : MonoBehaviour {
 		rb.velocity = speed * direction.normalized;
 
 	}
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag=="Shoot"){
+			AudioManager.instance.PlayEnemyDie(other.gameObject);
+			Destroy(this.gameObject);
+		}
+	}
 }
