@@ -23,8 +23,9 @@ public class LaserCtrl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "MainCamera"){
+		if (other.gameObject.CompareTag ("MainCamera")){
 			Destroy(this.gameObject);
 		}
 	}
+	
 }

@@ -12777,6 +12777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinParticles: {fileID: 1312759557050900, guid: 0e856e175fbf78e4992c032aea2f8d13,
     type: 2}
+  killParticles: {fileID: 0}
 --- !u!4 &2130970946 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4305330889499786, guid: a712a83618dd4b4498fe95570e1428f0,

@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114212559173052458}
   m_Layer: 12
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: FlyingEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
