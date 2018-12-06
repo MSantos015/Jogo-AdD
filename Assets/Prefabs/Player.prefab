@@ -256,6 +256,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   delayForDoubleJump: 0
+  delayForShoot: 0.2
   RightShootPrefab: {fileID: 1389640685181076, guid: 5485dacadbca1824d9238ec1b519cc0c,
     type: 2}
   LeftShootPrefab: {fileID: 1816686720283458, guid: a0d761cc67606b740ae880fbb7f92f88,
@@ -304,7 +305,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7e52fded6814f214a8b4696e6404d185, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
