@@ -28,4 +28,13 @@ public class AudioManager : MonoBehaviour {
 	public void PlayEnemyDie(GameObject obj){
 		AudioSource.PlayClipAtPoint(audioSFX.enemydie, obj.transform.position);
 	}
+	public void PlayStarSound(GameObject obj){
+		Vector3 vet = new Vector3(obj.transform.position.x,obj.transform.position.y,0);
+		AudioSource.PlayClipAtPoint(audioSFX.star, vet);
+	}
+	public void PlayLevelCompleteSound(GameObject obj){
+		Vector3 vet = new Vector3(obj.transform.position.x,obj.transform.position.y,0);
+		AudioSource.PlayClipAtPoint(audioSFX.levelComplete, vet);
+	}
+	
 }

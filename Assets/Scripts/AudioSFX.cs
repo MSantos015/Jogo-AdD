@@ -9,4 +9,7 @@ public class AudioSFX {
 	public AudioClip fail;
 	public AudioClip enemydie;
 	public AudioClip laser;
+	public AudioClip star;
+	public AudioClip levelComplete;
+
 }
