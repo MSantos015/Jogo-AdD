@@ -111,12 +111,17 @@ public class GM : MonoBehaviour {
 	public void LevelComplete(){
 		Destroy(player.gameObject);
 		timerOn=false;
+		StartCoroutine(MuteMusic(true,0f));
 		ui.levelComplete.levelCompleteStarPanel.SetActive(true);
 		/*
 		ui.levelComplete.txtCoinCount.text="Coins: "+data.coinCount;
 		ui.levelComplete.txtTimer.text="Timer: "+timeLeft.ToString("F0");
 		ui.levelComplete.levelCompletePanel.SetActive(true);
 		*/
+	}
+
+	public int Score(){
+		return data.coinCount;
 	}
 	public void HurtPlayer(){
 		if(player!=null){
